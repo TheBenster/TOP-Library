@@ -8,11 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="book"></div>
-    <div class="book"></div>
-    <div class="book"></div>
-    <div class="book"></div>
-    <div class="book"></div>
+<div class="container">
+    <button id="modalBtn">Add new book</button>
+    <dialog id="test">
+            <form action="cancel">
+                <div class="entry">
+                    <label for="title">Book Title:</label>
+                    <input type="text">
+                </div>
+                <div class="entry">
+                    
+                    <label for="author">Book Author:</label>
+                    <input type="text">
+                </div>
+                <div class="entry">
+                    <label for="pages" max="1" min=1>Number of pages</label>
+                    <input type="number">
+                </div>
+                <div class="entry">
+                    <label for="read">Have you finished it?</label>
+                    <input type="checkbox" name="read" id="read">
+                </div>
+                <div class="entry">
+                    <input type="submit">
+                    
+                </div>
+                <button id="cancel" action='cancel'onclick=close>Cancel</button>
+                
+            </form>
+    </dialog>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
