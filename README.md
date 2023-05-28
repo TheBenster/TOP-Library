@@ -2,7 +2,6 @@
 
 This is a library management application developed as part of The Odin Project's curriculum. It allows users to create, update, and delete books in a library collection.
 
-Library Project Screenshot
 
 ## Features
 
