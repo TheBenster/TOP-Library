@@ -10,34 +10,41 @@
 <body>
 <div class="container">
     <button id="modalBtn">Add new book</button>
-    <dialog id="test">
-            <form action="cancel">
+    <dialog id="modal">
+        <button method="close" id="close">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill=""></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+            <form action="">
                 <div class="entry">
-                    <label for="title">Book Title:</label>
-                    <input type="text">
+                    <label for="title" >Book Title:</label>
+                    <input name="title" id="title" type="text">
                 </div>
                 <div class="entry">
                     
                     <label for="author">Book Author:</label>
-                    <input type="text">
+                    <input name="author" id="author" type="text">
                 </div>
                 <div class="entry">
                     <label for="pages" max="1" min=1>Number of pages</label>
-                    <input type="number">
+                    <input name="pages" id='pages' type="number">
                 </div>
                 <div class="entry">
-                    <label for="read">Have you finished it?</label>
-                    <input type="checkbox" name="read" id="read">
+                    <label name="read" for="read">Have you finished it?</label>
+                    <input type="checkbox" id="read" name="read" id="read">
                 </div>
-                <div class="entry">
-                    <input type="submit">
-                    
-                </div>
-                <button id="cancel" action='cancel'onclick=close>Cancel</button>
-                
+                <div class="submit">
+                <button id="submit" action='submit' onclick=close>Submit</button>
+            </div>
             </form>
     </dialog>
 </div>
-    <script src="script.js"></script>
+<div class="book-list">
+    <div class="book">test</div>
+</div>
+    <script src="script.js" defer></script>
 </body>
 </html>

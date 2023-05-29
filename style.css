@@ -1,26 +1,93 @@
 body{
     background-color: #212121;
     color: white;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     gap: 10px;
+    flex-direction: column;
+    align-items: center;
 }
 
+.book-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    gap: 20px;
+}
 .book{
+    flex-direction: column;
+    padding: 10px;
     display: flex;
     align-items: center;
     text-align: center;
-    height: 250px;
-    width: 200px;
+    height: 100px;
     color: black;
     background-color: white;
     border: none;
     border-radius: 15px;
     justify-content: center;
 }
+svg{
+    background-color: rgb(9, 136, 205);
+    border-radius: 50px;
+    
+}
+svg:hover{
+    transition-duration: 0.4s;
+    background-color: white;
+    border: solid .25px rgb(9,136,205);
+    stroke: rgb(9,136,205)
+}
+svg:not(:hover){
+    transition-duration: 0.4s;
+}
+#close{
+    border: none;
+    background-color: white;
+    width: 25px;
+    cursor: pointer;
+}
+dialog{
+    display: none;
+    height: 200px;
+    align-items: center;
+    border-radius: 15px;
+    grid-template-rows: 1fr 1fr 1fr;
 
+    padding-left: 20px;
+}
+dialog[open]{
+    display:grid;
+}
+.submit{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+}
+#submit{
+    width: 100px;
+    border-radius: 15px;
+    border:none;
+    background-color:rgb(9,136,205);
+    color: white;
+}
+.del{
+    width: 100px;
+    height: 75px;
+    border: none;
+    background-color: rgb(9, 136, 205);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.entry{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 #test{
     border-radius: 15px;
     border: none;
@@ -49,30 +116,23 @@ form{
     gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+
 }
 input{
     height: 25px;
+    border-radius: 35px;
+    background-color: #d0d0d0;
+    border: none;
+    padding-left: 10px;
 }
-.modal-content {
 
-    border-radius: 30px;
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    height: 100%;
-    width: 80%;
-  }
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
+#modalBtn{
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    color:white;
+    background-color: rgb(9, 136, 205);
     cursor: pointer;
-  }
+    font-size: 1.1rem;
+}
