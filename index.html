@@ -21,20 +21,20 @@
             <form action="">
                 <div class="entry">
                     <label for="title" >Book Title:</label>
-                    <input name="title" id="title" type="text">
+                    <input name="title" required id="title" type="text">
                 </div>
                 <div class="entry">
                     
                     <label for="author">Book Author:</label>
-                    <input name="author" id="author" type="text">
+                    <input name="author" required id="author" type="text">
                 </div>
                 <div class="entry">
                     <label for="pages" max="1" min=1>Number of pages</label>
-                    <input name="pages" id='pages' type="number">
+                    <input name="pages" required id='pages' type="number">
                 </div>
                 <div class="entry">
                     <label name="read" for="read">Have you finished it?</label>
-                    <input type="checkbox" id="read" name="read" id="read">
+                    <input type="checkbox" required id="read" name="read" id="read">
                 </div>
                 <div class="submit">
                 <button id="submit" action='submit' onclick=close>Submit</button>
